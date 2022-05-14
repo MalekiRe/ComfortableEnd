@@ -22,7 +22,7 @@ public class Main implements ModInitializer {
     // It is considered best practice to use your mod id as the logger's name.
     // That way, it's clear which mod wrote info, warnings, and errors.
     public static final Logger LOGGER = LoggerFactory.getLogger("modid");
-    public static final Block METEORITE_BLOCK = new MeteoriteBlock(FabricBlockSettings.of(Material.METAL).strength(8, 10f).sounds(BlockSoundGroup.ANVIL));
+    public static final Block METEORITE_BLOCK = new MeteoriteBlock(FabricBlockSettings.of(Material.METAL).strength(2).sounds(BlockSoundGroup.ANVIL));
     @Override
     public void onInitialize() {
         //Blocks
@@ -31,7 +31,7 @@ public class Main implements ModInitializer {
         }
         //BlockItems
         {
-            RegisterBlockItem("meteroite_block", METEORITE_BLOCK, new FabricItemSettings().group(ItemGroup.DECORATIONS));
+            RegisterBlockItem("meteorite_block", METEORITE_BLOCK, new FabricItemSettings().group(ItemGroup.DECORATIONS));
         }
         //Items
         {
