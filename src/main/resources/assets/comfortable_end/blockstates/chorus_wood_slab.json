@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "comfortable_end:block/chorus_wood_slab"
+    },
+    "type=double": {
+      "model": "comfortable_end:block/chorus_wood_planks"
+    },
+    "type=top": {
+      "model": "comfortable_end:block/chorus_wood_slab_top"
+    }
+  }
+}

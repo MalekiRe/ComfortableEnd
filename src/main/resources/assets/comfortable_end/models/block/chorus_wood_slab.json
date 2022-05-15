@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/slab",
+    "textures": {
+        "bottom": "comfortable_end:block/chorus_wood_planks",
+        "top": "comfortable_end:block/chorus_wood_planks",
+        "side": "comfortable_end:block/chorus_wood_planks"
+    }
+}
