@@ -2,9 +2,11 @@ package malek.comfortable_end;
 
 import malek.comfortable_end.blocks.MeteoriteBlock;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
@@ -29,17 +31,20 @@ public class Main implements ModInitializer {
     public static final Item METEORIC_IRON_PICKAXE = new CustomPickaxeItem(MeteoricIronMaterial.INSTANCE, 2, -2.8f, new FabricItemSettings());
     public static final Item METEORIC_IRON_AXE = new CustomAxeItem(MeteoricIronMaterial.INSTANCE, 5.5f, 3.1f, new FabricItemSettings());
     public static final Item METEORIC_IRON_SWORD = new CustomSwordItem(MeteoricIronMaterial.INSTANCE, 3, -2.6f, new FabricItemSettings());
+
+    public static final Block ERODED_ENDSTONE = new Block(FabricBlockSettings.copyOf(Blocks.SAND));
+
+    public static final Block CHORUSWOOD_DOOR = new CustomDoor(FabricBlockSettings.copyOf(Blocks.DARK_OAK_DOOR));
     @Override
     public void onInitialize() {
-        //Blocks
-        {
-
-        }
+        BlockRenderLayerMap.INSTANCE.putBlock(CHORUSWOOD_DOOR, RenderLayer.getCutout());
         //BlockItems
         {
             RegisterBlockItem("meteorite_block", METEORITE_BLOCK, new FabricItemSettings().group(ItemGroup.DECORATIONS));
             RegisterBlockItem("chorus_wood_planks", CHORUS_WOOD_PLANKS, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
             RegisterBlockItem("chorus_wood_slab", CHORUS_WOOD_SLAB, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+            RegisterBlockItem("eroded_endstone", ERODED_ENDSTONE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
+            RegisterBlockItem("choruswood_door", CHORUSWOOD_DOOR, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS));
         }
         //Items
         {

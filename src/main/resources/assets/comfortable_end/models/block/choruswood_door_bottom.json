@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "top": "comfortable_end:block/chorus_door_top",
+    "bottom": "comfortable_end:block/chorus_door_bottom"
+  }
+}
